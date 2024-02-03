@@ -6,7 +6,7 @@ public class Main {
 
     private static final FileUploaderForm fileUploaderForm = new FileUploaderForm();
 
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+    public static void main(String[] args) {
         fileUploaderForm.setVisible(true);
     }
 }

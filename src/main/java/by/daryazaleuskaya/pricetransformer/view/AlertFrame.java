@@ -7,7 +7,7 @@ class AlertFrame extends JFrame {
 
     public AlertFrame(String labelName, Color alertColor) {
         setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  // Only close this frame, not the whole application
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);  // Only close this frame, not the whole application
         setSize(250, 100);
         setLocationRelativeTo(null);
         setTitle("Confirmation");
