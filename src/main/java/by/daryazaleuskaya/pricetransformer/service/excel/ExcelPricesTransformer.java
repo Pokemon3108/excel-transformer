@@ -1,6 +1,5 @@
 package by.daryazaleuskaya.pricetransformer.service.excel;
 
-import by.daryazaleuskaya.pricetransformer.service.EncoderUtils;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -9,7 +8,6 @@ import org.apache.poi.ss.usermodel.Row;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -60,7 +58,7 @@ public class ExcelPricesTransformer {
         }
     }
 
-    private List<List<Object>> buildNewFileColumns(List<List<Object>> table) throws UnsupportedEncodingException {
+    private List<List<Object>> buildNewFileColumns(List<List<Object>> table) {
         List<List<Object>> newTable = new ArrayList<>();
         for (List<Object> row : table) {
             List<Object> newTableRow = new ArrayList<>();
@@ -73,10 +71,8 @@ public class ExcelPricesTransformer {
             newTableRow.add("");
             newTableRow.add(row.get(4) + " " + row.get(6)); // Combo parameters
             newTableRow.add("");
-//            List<String> a = new ArrayList<>();
-//            a.add("¡·‡‚ÔÊÎ‚ÓÔ");
-            newTableRow.add(EncoderUtils.getUtf8String("¡ÂÎ‡ÛÒ¸"));
-            newTableRow.add("ŒŒŒ \"Ã‡Í ‘ÓÏ˝Î¸\"");
+            newTableRow.add("–ë–µ–ª–∞—Ä—É—Å—å");
+            newTableRow.add("–û–û–û \"–ú–∞—Ä–∫ –§–æ—Ä–º—ç–ª—å\"");
             newTableRow.add(row.get(7));  // Sort
             newTableRow.add(row.get(8));  // Unit of measurement
             newTableRow.add("");
