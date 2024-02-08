@@ -1,5 +1,6 @@
 package by.daryazaleuskaya.pricetransformer.service.excel;
 
+import by.daryazaleuskaya.pricetransformer.service.matcher.FieldsDefiner;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class ExcelPricesTransformer {
 
+    private final FieldsDefiner fieldsDefiner = new FieldsDefiner();
     private final FileNameBuilder fileNameBuilder = new FileNameBuilder();
 
     public File manipulateExcelColumns(File input) throws Exception {
@@ -62,23 +64,25 @@ public class ExcelPricesTransformer {
         List<List<Object>> newTable = new ArrayList<>();
         for (List<Object> row : table) {
             List<Object> newTableRow = new ArrayList<>();
+            String modelNumber = row.get(1).toString();
+            String productName = row.get(3).toString();
             newTableRow.add(row.get(2));  // Article Number
-            newTableRow.add(row.get(3));  // Name
+            newTableRow.add(productName);  // Name
             newTableRow.add(row.get(16)); // Code EAH
             newTableRow.add(row.get(9));  // Amount
             newTableRow.add(row.get(10)); // Price
             newTableRow.add(row.get(12)); // TAX
             newTableRow.add("");
             newTableRow.add(row.get(4) + " " + row.get(6)); // Combo parameters
-            newTableRow.add("");
+            newTableRow.add(fieldsDefiner.getCategory(productName, modelNumber));
             newTableRow.add("Беларусь");
             newTableRow.add("ООО \"Марк Формэль\"");
             newTableRow.add(row.get(7));  // Sort
             newTableRow.add(row.get(8));  // Unit of measurement
             newTableRow.add("");
+            newTableRow.add(fieldsDefiner.getGroup(productName, modelNumber));
             newTableRow.add("");
-            newTableRow.add("");
-            newTableRow.add(row.get(1));  // Model
+            newTableRow.add(modelNumber);  // Model
             newTable.add(newTableRow);
         }
         return newTable;
