@@ -18,7 +18,7 @@ public enum Category {
     MAN_UNDERWEAR("Мужское белье", Group.CAT_46),
     MAN_TERMO("Термо мужское", Group.CAT_46),
     MAN_BEACH("Мужской пляж", Group.CAT_46),
-    MAN_SOCKS("Носки женские", Group.CAT_47),
+    MAN_SOCKS("Носки мужские", Group.CAT_47),
     UNISEX_SOCKS("Носки унисекс", Group.CAT_47),
 
     GIRL_LIFE("Девочка life", Group.CAT_R5),
