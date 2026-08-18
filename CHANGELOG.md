@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/Pokemon3108/excel-transformer/compare/v0.1.1...v0.1.2) (2026-08-18)
+
+
+### Bug Fixes
+
+* fix shadowJar pipeline step ([25920f2](https://github.com/Pokemon3108/excel-transformer/commit/25920f28c38da9680fefa260fedaf1cfa8ca3e61))
+
 ## [0.1.1](https://github.com/Pokemon3108/excel-transformer/compare/v0.1.0...v0.1.1) (2026-08-18)
 
 
