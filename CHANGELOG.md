@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/Pokemon3108/excel-transformer/compare/v0.1.3...v0.1.4) (2026-08-18)
+
+
+### Bug Fixes
+
+* remove version from build.gradle ([c5a2824](https://github.com/Pokemon3108/excel-transformer/commit/c5a2824f6488a02f86528fbeee76d0d720613742))
+
 ## [0.1.3](https://github.com/Pokemon3108/excel-transformer/compare/v0.1.2...v0.1.3) (2026-08-18)
 
 
