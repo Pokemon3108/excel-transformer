@@ -75,7 +75,7 @@ public class ExcelPricesTransformer {
             newTableRow.add("");
             newTableRow.add(row.get(4) + " " + row.get(6)); // Combo parameters
             newTableRow.add(fieldsDefiner.getCategory(productName, modelNumber));
-            newTableRow.add("Беларусь");
+            newTableRow.add(row.get(20));
             newTableRow.add("ООО \"Марк Формэль\"");
             newTableRow.add(row.get(7));  // Sort
             newTableRow.add(row.get(8));  // Unit of measurement
