@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/Pokemon3108/excel-transformer/compare/v0.1.2...v0.1.3) (2026-08-18)
+
+
+### Bug Fixes
+
+* add logging to upload jar to release pipeline step ([e922941](https://github.com/Pokemon3108/excel-transformer/commit/e922941851a9d1008594b32a7ba9468b3f3b2016))
+
 ## [0.1.2](https://github.com/Pokemon3108/excel-transformer/compare/v0.1.1...v0.1.2) (2026-08-18)
 
 
