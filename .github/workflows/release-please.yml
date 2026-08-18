@@ -53,4 +53,7 @@ jobs:
         run: |
           TAG=${{ needs.release-please.outputs.tag_name }}
           VERSION=${TAG#v}
+          echo ${VERSION}
+          ls -l
+          ls -l build/libs
           gh release upload "$TAG" "build/libs/excel-transformer-${VERSION}-all.jar"
